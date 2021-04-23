@@ -1,0 +1,152 @@
+/* 清除全局样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* 大盒子大小 */
+
+#content {
+    width: 100%;
+    height: 300px;
+    margin-top: 100px;
+}
+
+
+/* 图片盒子大小 */
+
+.wrap {
+    width: 50%;
+    height: 300px;
+    position: relative;
+    transform-style: preserve-3d;
+    margin: 0 auto;
+}
+
+
+/* 图片叠加 */
+
+.wrap ul li {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+/* 图片宽高和样式 */
+
+img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+
+/* 错开图片 */
+
+
+/* 对左边图片定位，透明度，堆叠顺序，过渡 */
+
+.left {
+    left: -300px;
+    transform: scale(0.8);
+    background: rgb(0, 0, 0);
+    transition: all 0.5s ease;
+    z-index: 4;
+}
+
+
+/* 中间图片 */
+
+.center {
+    left: 0;
+    top: 0;
+    bottom: 10%;
+    transition: all 0.5s ease;
+    z-index: 6;
+}
+
+
+/* 右边图片 */
+
+.right {
+    left: 300px;
+    transform: scale(0.8);
+    background: rgb(0, 0, 0);
+    transition: all 0.5s ease;
+    z-index: 4;
+}
+
+
+/* 隐藏其他图片 */
+
+.p1,
+.p2,
+.p3 {
+    left: 0;
+    top: 0;
+    visibility: hidden;
+    transform: scale(0);
+    z-index: 3;
+}
+
+
+/* 按钮盒子样式 */
+
+.list {
+    width: 30%;
+    height: 7px;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+
+/* 按钮样式 */
+
+.btn {
+    transition: all 0.3s ease;
+    flex: 1;
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+
+/* 左右箭头样式 */
+
+.last,
+.next {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 37px;
+    cursor: pointer;
+    top: 40%;
+    color: rgba(255, 255, 255, 0.6);
+    display: none;
+    z-index: 10;
+}
+
+
+/* 定位左箭头 */
+
+.last {
+    left: -230px;
+}
+
+
+/* 定位右箭头 */
+
+.next {
+    right: -230px;
+}
